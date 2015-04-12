@@ -1,5 +1,5 @@
 library(lubridate)
-mydata<-read.table(file="household_power_consumption.txt", header=TRUE, sep=";")
+mydata<-read.table(file="household_power_consumption.txt", header=TRUE, sep=";", na.strings = "?")
 mydata$newdate<-as.Date(mydata$Date, "%d/%m/%Y")
 feb1<-mydata[mydata$newdate=="2007-02-01",]
 feb2<-mydata[mydata$newdate=="2007-02-02",]
